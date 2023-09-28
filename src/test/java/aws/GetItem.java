@@ -27,7 +27,6 @@ public class GetItem {
         Map<String, AttributeValue> returnedItem = ddb.getItem(request).item();
 
         try {
-            // If there is no matching item, GetItem does not return any data.
             if (returnedItem.isEmpty())
                 System.out.format("No item found with the key %s!\n", key);
             else {

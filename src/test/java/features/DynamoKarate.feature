@@ -4,12 +4,12 @@ Feature: Retrieve content from a DynamoDB table
     * def listTableClass = Java.type('aws.ListTable')
     * def checkTableExistClass = Java.type('aws.CheckTableExist')
     * def getItemClass = Java.type('aws.GetItem')
-    #* def twoKeysClass = Java.type('aws.TwoKeys')
+    * def twoKeysClass = Java.type('aws.TwoKeys')
     * def table_name = 'Animal'
     * def key = 'AnimalName'
     * def keyVal = 'Dog'
-    #* def sortKey = 'MovieDirector'
-    #* def sortKeyVal = 'Peter Sohn'
+    * def sortKey = 'MovieDirector'
+    * def sortKeyVal = 'Peter Sohn'
 
     @ListAllTables
     Scenario: List tables from DynamoDB
@@ -36,7 +36,7 @@ Feature: Retrieve content from a DynamoDB table
       Then assert get_item != null
 
 
-    #@TableWithTwoKeys
-    #Scenario: Get items from a table with partition key and sort key
-    #* def two_keys = twoKeysClass.TwoDynamoDBKeys()
-    #* print two_keys
+    @TableWithTwoKeys
+    Scenario: Get items from a table with partition key and sort key
+    * def two_keys = twoKeysClass.TwoDynamoDBKeys()
+    * print two_keys
