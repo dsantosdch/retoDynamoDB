@@ -17,6 +17,5 @@ public class awsConnection {
                 .credentialsProvider(StaticCredentialsProvider.create(getSessionCredentials()))
                 .build();
     }
-//comentario
 
 }
